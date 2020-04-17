@@ -9,5 +9,22 @@ public class AlternateAlteration {
 
 
         // для массива arr ответ {15, 16, 171, 155, 200, 45, 89}
+
+
+        for (int i = 0; i < arr.length; i++) {
+            if (i != 0 && i != arr.length - 1) {
+                if (i % 2 == 0) {
+                    int t = arr[i];
+                    int a = arr[i - 1];
+                    int b = arr[i + 1];
+                    t = a + b;
+                    System.out.println(t);
+                }else {
+                    System.out.println(arr[i]);
+                }
+            }else {
+                System.out.println(arr[i]);
+            }
+        }
     }
 }

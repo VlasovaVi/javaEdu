@@ -8,7 +8,7 @@ public class LoopsDemo {
         other_arr[0] = 1;
         other_arr[1] = 2;
         //findDefect();
-        //sumOfEven();
+        sumOfEven();
         Scanner scanner = new Scanner(System.in);//
         int sum = 0;
 
