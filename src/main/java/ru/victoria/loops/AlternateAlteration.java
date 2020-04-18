@@ -14,11 +14,11 @@ public class AlternateAlteration {
         for (int i = 0; i < arr.length; i++) {
             if (i != 0 && i != arr.length - 1) {
                 if (i % 2 == 0) {
-                    int t = arr[i];
+                    //int t = arr[i];
                     int a = arr[i - 1];
                     int b = arr[i + 1];
-                    t = a + b;
-                    System.out.println(t);
+                    arr[i] = a + b;
+                    //System.out.println(t);
                 }else {
                     System.out.println(arr[i]);
                 }
