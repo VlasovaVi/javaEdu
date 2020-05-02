@@ -24,12 +24,22 @@ public class ArraysSearch {
     }
 
     //implement
+
     public static boolean containsNumber(int[] nums, int num) {
+        for (int i = 0; i < nums.length; i++)
+            if (nums[i] == num) {
+                return true;
+            }
         return false;
     }
 
 
     public static boolean containsNumber(double[] nums, double num) {
+        for (int i = 0; i < nums.length; i++){
+            if(nums[i] == num){
+                return true;
+            }
+        }
         return false;
     }
 

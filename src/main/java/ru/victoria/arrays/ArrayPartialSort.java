@@ -1,5 +1,7 @@
 package ru.victoria.arrays;
 
+import java.util.Arrays;
+
 public class ArrayPartialSort {
     public static void main(String[] args) {
         int[] nums = {10, 3000, 455, 11, -12, 48};
@@ -16,7 +18,6 @@ public class ArrayPartialSort {
     }
 
     /**
-     *
      * @param nums array of numbers
      * @return index of min element
      */
@@ -26,20 +27,34 @@ public class ArrayPartialSort {
         }
 
         int minIdx = 0;
-        for (int i = 0; i < nums.length; i++){
-            if(nums[i]< nums[minIdx]){
+        int minSecond = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < nums[minIdx]) {
+                minSecond = minIdx;
                 minIdx = i;
+            } else if (nums[i] < nums[minSecond]) {
+                minSecond = i;
             }
         }
-        return minIdx;
+        return minSecond;
     }
 
     /// implement
     public static int findMaxIdx(int[] nums) {
-        return 0;
+        if (nums.length == 0){
+            return -1;
+        }
+        int maxIdx = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > nums[maxIdx]) {
+                maxIdx = i;
+
+            }
+        }return maxIdx;
     }
 
-    // find index of second minimal element
+
+
     public static int findMinSecondIdx(int[] nums) {
         return 0;
     }
