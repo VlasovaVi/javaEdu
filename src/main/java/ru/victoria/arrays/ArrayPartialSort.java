@@ -50,13 +50,28 @@ public class ArrayPartialSort {
                 maxIdx = i;
 
             }
-        }return maxIdx;
+        }
+        return maxIdx;
     }
 
 
 
     public static int findMinSecondIdx(int[] nums) {
-        return 0;
+        if (nums.length < 2) {
+            return -1;
+        }
+
+        int minIdx = 0;
+        int minSecond = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < nums[minIdx]) {
+                minSecond = minIdx;
+                minIdx = i;
+            } else if (nums[i] < nums[minSecond]) {
+                minSecond = i;
+            }
+        }
+        return minSecond;
     }
 
     public static void printArray(int[] ints) {

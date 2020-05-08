@@ -3,6 +3,8 @@ package ru.victoria.arrays;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.Arrays;
+
 public class ArrayPartialSortTest {
 
     @Test
@@ -34,7 +36,7 @@ public class ArrayPartialSortTest {
         int[] arg = {3,52,1,5,8,12};
         int result = ArrayPartialSort.findMinSecondIdx(arg);
 
-        Assert.assertEquals(result, arg.length - 1);
+        Assert.assertEquals(result, 0);
 
         arg = new int[]{};
         result = ArrayPartialSort.findMinSecondIdx(arg);
@@ -45,5 +47,6 @@ public class ArrayPartialSortTest {
         result = ArrayPartialSort.findMinSecondIdx(arg);
         Assert.assertEquals(result, -1);
     }
+
 
 }
