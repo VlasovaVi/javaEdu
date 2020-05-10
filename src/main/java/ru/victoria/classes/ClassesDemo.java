@@ -2,6 +2,7 @@ package ru.victoria.classes;
 
 public class ClassesDemo {
     public static void main(String[] args) {
+
         String fedorFirstName = "Fedor";
         int fedorAge= 48;
 
@@ -9,28 +10,24 @@ public class ClassesDemo {
         int ivanAge = 54;
 
 
-        Person fedor = new Person();
-        fedor.firstName = "Fedor";
-        fedor.lastName = "Fedorov";
-        fedor.age = 48;
-        fedor.address = "St.Petersburg, ..?.";
-
         Person ivan = new Person("Ivan", "Ivanov", 54, "Moscow, Kremlin");
 
-
+        System.out.println("ivan.getFirstName() = " + ivan.getFirstName());
 
         //printPersonData(fedorFirstName, "Fedorov", fedorAge, "St.Petersburg, ..?.");
         //printPersonData(ivanFirstName, "Ivanov", ivanAge, "Moscow, Kremlin");
         //printPersonData(fedor);
 //        printPersonData(ivan);
-        fedor.print();
+        ivan.print();
+        ivan.setAge(55);
         ivan.print();
 
 
+
         Person person = new Person();
+        person.setAge(10);
         String str = null;
 
-        System.out.println("person.address = " + person.address);
         System.out.println("str = " + str);
 
         //.....
@@ -43,7 +40,7 @@ public class ClassesDemo {
     }
 
     public static void printPersonData(Person person) {
-        System.out.println("Person named as " + person.firstName + " " + person.lastName + " has age " + person.age );
-        System.out.println("Person lives in " + person.address);
+        System.out.println("Person named as " + person.getFirstName() + " " + person.getLastName() + " has age " + person.getAge() );
+        System.out.println("Person lives in " + person.getAddress());
     }
 }
