@@ -1,5 +1,7 @@
 package ru.victoria.classes.inheritance;
 
+import java.util.Comparator;
+
 public class FiguresDemo {
     public static void main(String[] args) {
         Figure fig1 = new Figure(50.0, 10.0);
@@ -37,7 +39,7 @@ public class FiguresDemo {
      * if fig1.area > fig2.area -> true
      * if fig1.area == fig2.area -> compare peremiteres
      */
-    public boolean firstGreaterThanSecond(Figure fig1, Figure fig2) {
+    public static boolean firstGreaterThanSecond(Figure fig1, Figure fig2) {
       if(fig1.getArea() > fig2.getArea()){
             return true;
         }
