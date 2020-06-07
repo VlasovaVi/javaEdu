@@ -10,10 +10,12 @@ public class Rectangle extends Figure {
        this.width = width;
    }
    public double getLength(){
+
        return length;
    }
 
    public double getWidth(){
+
        return width;
    }
 }

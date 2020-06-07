@@ -6,9 +6,9 @@ public class FiguresDemo {
     public static void main(String[] args) {
         Figure fig1 = new Figure(50.0, 10.0);
         Figure fig2 = new Figure(30.0, 22.1);
-        Triangle_wrong triangleWrong = new Triangle_wrong(3,4,5);
+        Triangle_wrong triangleWrong = new Triangle_wrong(3, 4, 5);
         Triangle triangle = new Triangle(3, 4, 5);
-        Rectangle rectangle = new Rectangle(20.0,  40.0);
+        Rectangle rectangle = new Rectangle(20.0, 40.0);
         System.out.println("triangle.getArea() = " + triangle.getArea());
         System.out.println("rectangle.getArea() = " + rectangle.getArea());
 
@@ -40,12 +40,33 @@ public class FiguresDemo {
      * if fig1.area == fig2.area -> compare peremiteres
      */
     public static boolean firstGreaterThanSecond(Figure fig1, Figure fig2) {
-      if(fig1.getArea() > fig2.getArea()){
+        if (fig1.getArea() > fig2.getArea()) {
             return true;
-        }
-        else {
+        } else if (fig1.getArea() < fig2.getArea()) {
             return false;
+        } else if (fig1.getArea() == fig2.getArea()) {
+
+            if (fig1.getPerimeter() > fig2.getPerimeter()) {
+                return true;
+            }
+            if (fig1.getPerimeter() < fig2.getPerimeter()) {
+                return false;
+            }
         }
+        throw new RuntimeException();
     }
 
+    public static boolean firstGreaterThanSecond1(Figure fig1, Figure fig2) {
+        if (fig1.getArea() > fig2.getArea()) {
+            return true;
+        } else if (fig1.getArea() < fig2.getArea()) {
+            return false;
+        } else {
+            if (fig1.getPerimeter() > fig2.getPerimeter()) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
+
